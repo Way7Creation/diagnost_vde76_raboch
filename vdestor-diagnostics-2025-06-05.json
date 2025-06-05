@@ -1,0 +1,1151 @@
+{
+  "timestamp": "2025-06-05 10:21:11",
+  "execution_time": 6.93,
+  "health_score": 38,
+  "overall_status": "critical",
+  "summary": {
+    "total_checks": 58,
+    "passed": 40,
+    "warnings": 12,
+    "failed": 6
+  },
+  "critical_errors": [
+    "Отсутствуют PHP расширения",
+    "Небезопасные права доступа"
+  ],
+  "diagnostics": {
+    "system": {
+      "title": "🖥️ Информация о системе",
+      "status": "✅ OK",
+      "data": {
+        "Hostname": "7375893.ru",
+        "OS": "Linux 5.15.0-141-generic",
+        "Architecture": "x86_64",
+        "PHP Version": "8.1.2-1ubuntu2.21",
+        "PHP SAPI": "fpm-fcgi",
+        "Server Software": "nginx/1.18.0",
+        "Server Time": "2025-06-05 10:21:04",
+        "Timezone": "Europe/Moscow",
+        "Uptime": "1 дней, 0 часов, 25 минут"
+      }
+    },
+    "php_config": {
+      "title": "⚙️ PHP Конфигурация",
+      "status": "✅ OK",
+      "checks": {
+        "memory_limit": {
+          "current": "8192M",
+          "required": "8192M",
+          "status": "✅"
+        },
+        "max_execution_time": {
+          "current": "Unlimited",
+          "required": 300,
+          "status": "✅"
+        },
+        "post_max_size": {
+          "current": "2048M",
+          "required": "2048M",
+          "status": "✅"
+        },
+        "upload_max_filesize": {
+          "current": "2048M",
+          "required": "2048M",
+          "status": "✅"
+        },
+        "max_input_vars": {
+          "current": "100000",
+          "required": 100000,
+          "status": "✅"
+        },
+        "max_file_uploads": {
+          "current": "1000",
+          "required": 1000,
+          "status": "✅"
+        }
+      },
+      "additional": {
+        "display_errors": "0",
+        "error_reporting": 22527,
+        "log_errors": "1",
+        "error_log": "/var/log/php/www-error.log",
+        "date.timezone": "",
+        "default_charset": "UTF-8",
+        "opcache.enable": "1",
+        "opcache.memory_consumption": "1024",
+        "session.gc_maxlifetime": "3600",
+        "session.save_handler": "user"
+      }
+    },
+    "php_extensions": {
+      "title": "🧩 PHP Расширения",
+      "status": "❌ Error",
+      "required": {
+        "installed": {
+          "pdo": "База данных",
+          "pdo_mysql": "MySQL драйвер",
+          "json": "JSON обработка",
+          "curl": "HTTP запросы",
+          "mbstring": "Мультибайтовые строки",
+          "openssl": "Шифрование",
+          "session": "Сессии",
+          "zip": "Архивы",
+          "gd": "Обработка изображений",
+          "fileinfo": "Определение типов файлов"
+        },
+        "missing": {
+          "bcmath": "Точные вычисления",
+          "intl": "Интернационализация"
+        }
+      },
+      "optional": {
+        "redis": "Redis поддержка",
+        "imagick": "Расширенная обработка изображений",
+        "igbinary": "Бинарная сериализация"
+      },
+      "total_loaded": 60,
+      "error": "Отсутствуют обязательные расширения: bcmath, intl"
+    },
+    "filesystem": {
+      "title": "📁 Файловая система",
+      "status": "✅ OK",
+      "paths": {
+        "root": {
+          "path": "/var/www/www-root/data/site/vdestor.ru",
+          "exists": "✅",
+          "readable": "✅",
+          "writable": "✅"
+        },
+        "public": {
+          "path": "/var/www/www-root/data/site/vdestor.ru/public",
+          "exists": "✅",
+          "readable": "✅",
+          "writable": "✅"
+        },
+        "config": {
+          "path": "/etc/vdestor/config",
+          "exists": "✅",
+          "readable": "✅",
+          "writable": "❌"
+        },
+        "logs": {
+          "path": "/var/log/vdestor",
+          "exists": "✅",
+          "readable": "✅",
+          "writable": "✅"
+        },
+        "cache": {
+          "path": "/tmp/vdestor_cache",
+          "exists": "✅",
+          "readable": "✅",
+          "writable": "✅"
+        },
+        "sessions": {
+          "path": "/var/www/www-root/data/mod-tmp",
+          "exists": "✅",
+          "readable": "✅",
+          "writable": "✅"
+        },
+        "uploads": {
+          "path": "/var/www/www-root/data/site/vdestor.ru/public/uploads",
+          "exists": "✅",
+          "readable": "✅",
+          "writable": "✅"
+        },
+        "assets": {
+          "path": "/var/www/www-root/data/site/vdestor.ru/public/assets",
+          "exists": "✅",
+          "readable": "✅",
+          "writable": "✅"
+        }
+      }
+    },
+    "permissions": {
+      "title": "🔐 Права доступа",
+      "status": "⚠️ Warning",
+      "files": {
+        "/etc/vdestor/config/.env": {
+          "exists": "✅",
+          "perms": "0640",
+          "expected": "0600",
+          "secure": "❌",
+          "owner": "www-data",
+          "group": "www-data"
+        },
+        "/etc/vdestor/config/database.ini": {
+          "exists": "✅",
+          "perms": "0640",
+          "expected": "0600",
+          "secure": "❌",
+          "owner": "www-data",
+          "group": "www-data"
+        },
+        "/etc/vdestor/config/app.ini": {
+          "exists": "✅",
+          "perms": "0640",
+          "expected": "0600",
+          "secure": "❌",
+          "owner": "www-data",
+          "group": "www-data"
+        }
+      },
+      "warning": "Неправильные права доступа к критическим файлам"
+    },
+    "disk_space": {
+      "title": "💾 Дисковое пространство",
+      "status": "✅ OK",
+      "partitions": {
+        "Корневой раздел": {
+          "path": "/",
+          "total": "442.82 GB",
+          "used": "346.98 GB",
+          "free": "95.84 GB",
+          "percent_used": 78.36,
+          "status": "✅"
+        },
+        "Директория приложения": {
+          "path": "/var/www/www-root/data/site/vdestor.ru",
+          "total": "442.82 GB",
+          "used": "346.98 GB",
+          "free": "95.84 GB",
+          "percent_used": 78.36,
+          "status": "✅"
+        },
+        "Временные файлы": {
+          "path": "/tmp",
+          "total": "442.82 GB",
+          "used": "346.98 GB",
+          "free": "95.84 GB",
+          "percent_used": 78.36,
+          "status": "✅"
+        },
+        "Логи": {
+          "path": "/var/log/vdestor",
+          "total": "442.82 GB",
+          "used": "346.98 GB",
+          "free": "95.84 GB",
+          "percent_used": 78.36,
+          "status": "✅"
+        }
+      }
+    },
+    "system_load": {
+      "title": "📊 Нагрузка системы",
+      "load_average": {
+        "1_min": 0,
+        "5_min": 0,
+        "15_min": 0
+      },
+      "cpu_cores": 10,
+      "normalized_load": {
+        "1_min": 0,
+        "5_min": 0,
+        "15_min": 0
+      },
+      "status": "✅ OK",
+      "process_info": {
+        "total_processes": 333,
+        "php_fpm_processes": 117,
+        "nginx_processes": 117
+      }
+    },
+    "network": {
+      "title": "🌐 Сетевое подключение",
+      "status": "✅ OK",
+      "hosts": {
+        "Google": {
+          "host": "google.com",
+          "status": "✅",
+          "latency": "24.84 ms"
+        },
+        "Яндекс": {
+          "host": "yandex.ru",
+          "status": "✅",
+          "latency": "11.45 ms"
+        },
+        "CDN": {
+          "host": "cdnjs.cloudflare.com",
+          "status": "✅",
+          "latency": "61.87 ms"
+        },
+        "Google Fonts": {
+          "host": "fonts.googleapis.com",
+          "status": "✅",
+          "latency": "21.16 ms"
+        }
+      }
+    },
+    "dns": {
+      "title": "🌍 DNS проверка",
+      "domain": "vdestor.ru",
+      "resolution_time": "529.64 ms",
+      "records": [
+        {
+          "type": "A",
+          "value": "79.133.183.86",
+          "ttl": 600
+        },
+        {
+          "type": "MX",
+          "value": "mx2.timeweb.ru",
+          "ttl": 600
+        },
+        {
+          "type": "MX",
+          "value": "mx1.timeweb.ru",
+          "ttl": 600
+        }
+      ],
+      "status": "⚠️ Warning",
+      "warning": "Медленное разрешение DNS"
+    },
+    "https": {
+      "title": "🔒 HTTPS сертификат",
+      "url": "https://vdestor.ru",
+      "certificate": {
+        "issuer": "Let's Encrypt",
+        "subject": "vdestor.ru",
+        "valid_from": "2025-04-03",
+        "valid_to": "2025-07-02",
+        "days_left": 27
+      },
+      "status": "⚠️ Warning",
+      "warning": "Сертификат истекает менее чем через 30 дней"
+    },
+    "database": {
+      "title": "🗄️ База данных MySQL",
+      "status": "✅ OK",
+      "info": {
+        "version": "8.0.42-0ubuntu0.22.04.1",
+        "active_connections": "2",
+        "max_connections": "500",
+        "connection_usage": "0.4%"
+      }
+    },
+    "database_tables": {
+      "title": "📋 Таблицы базы данных",
+      "total_tables": 43,
+      "total_rows": 4980247,
+      "total_size": "1.37 GB",
+      "top_tables": [
+        {
+          "name": "products",
+          "rows": 599465,
+          "size": "591.53 MB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "application_logs",
+          "rows": 828518,
+          "size": "303.92 MB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "product_attributes",
+          "rows": 1077775,
+          "size": "207.2 MB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "product_documents",
+          "rows": 723444,
+          "size": "119.14 MB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "product_images",
+          "rows": 751108,
+          "size": "90.61 MB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "supplier_mappings",
+          "rows": 363156,
+          "size": "61.69 MB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "product_categories",
+          "rows": 586710,
+          "size": "26.06 MB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "related_products",
+          "rows": 42139,
+          "size": "4.53 MB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "series",
+          "rows": 4955,
+          "size": "576 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "rate_limits",
+          "rows": 1239,
+          "size": "208 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "audit_logs",
+          "rows": 445,
+          "size": "160 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "users",
+          "rows": 1,
+          "size": "144 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "brands",
+          "rows": 1038,
+          "size": "128 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "categories",
+          "rows": 251,
+          "size": "112 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "carts",
+          "rows": 1,
+          "size": "96 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "stock_balances",
+          "rows": 0,
+          "size": "96 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "search_logs",
+          "rows": 0,
+          "size": "80 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "cart_items",
+          "rows": 0,
+          "size": "80 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "client_prices",
+          "rows": 0,
+          "size": "80 KB",
+          "engine": "InnoDB"
+        },
+        {
+          "name": "delivery_schedules",
+          "rows": 2,
+          "size": "80 KB",
+          "engine": "InnoDB"
+        }
+      ],
+      "status": "✅ OK"
+    },
+    "database_indexes": {
+      "title": "🔍 Индексы базы данных",
+      "missing_indexes": [],
+      "status": "✅ OK",
+      "info": "Все необходимые индексы присутствуют"
+    },
+    "database_performance": {
+      "title": "⚡ Производительность БД",
+      "query_times": {
+        "simple_select": "0.15 ms",
+        "count_products": "62.88 ms",
+        "join_query": "102.89 ms",
+        "search_query": "116.26 ms"
+      },
+      "status": "⚠️ Warning",
+      "warning": "Медленные запросы: join_query, search_query"
+    },
+    "database_integrity": {
+      "title": "🔧 Целостность данных",
+      "issues": [
+        "Товары без цен: 591612",
+        "Товары без остатков: 591611"
+      ],
+      "status": "⚠️ Warning",
+      "warning": "Обнаружены проблемы с целостностью данных"
+    },
+    "database_size": {
+      "title": "💿 Размер базы данных",
+      "total_size": "1.37 GB",
+      "data_size": "1.06 GB",
+      "index_size": "324.95 MB",
+      "table_count": 43,
+      "status": "✅ OK"
+    },
+    "opensearch": {
+      "title": "🔎 OpenSearch",
+      "cluster_name": "my-cluster",
+      "status": "⚠️ Warning",
+      "nodes": 1,
+      "data_nodes": 1,
+      "active_shards": 10,
+      "relocating_shards": 0,
+      "unassigned_shards": 5,
+      "warning": "Кластер OpenSearch требует внимания"
+    },
+    "opensearch_indexes": {
+      "title": "📑 Индексы OpenSearch",
+      "total_indices": 3,
+      "total_documents": 3919518,
+      "total_size": "2.3 GB",
+      "indices": [
+        {
+          "name": "products_temp_2025_06_02_21_09_57",
+          "docs": 0,
+          "size": "416 B",
+          "health": "unknown"
+        },
+        {
+          "name": "products_2025_06_04_11_24_37",
+          "docs": 2229431,
+          "size": "1.36 GB",
+          "health": "unknown"
+        },
+        {
+          "name": "products_v6_20250602_111648",
+          "docs": 1690087,
+          "size": "965.8 MB",
+          "health": "unknown"
+        }
+      ],
+      "alias_exists": true,
+      "status": "✅ OK"
+    },
+    "opensearch_performance": {
+      "title": "⚡ Производительность OpenSearch",
+      "query_results": {
+        "match_all": {
+          "time": "17.76 ms",
+          "hits": 10000
+        },
+        "term_search": {
+          "time": "3.05 ms",
+          "hits": 0
+        },
+        "fuzzy_search": {
+          "time": "19.12 ms",
+          "hits": 10000
+        }
+      },
+      "status": "✅ OK"
+    },
+    "cache": {
+      "title": "💾 Система кеширования",
+      "enabled": true,
+      "cache_dir": "/tmp/vdestor_cache/",
+      "total_files": 8,
+      "valid_files": 2,
+      "total_size": "118.52 KB",
+      "tests": {
+        "write": "✅",
+        "read": "✅",
+        "delete": "✅"
+      },
+      "status": "✅ OK"
+    },
+    "cache_performance": {
+      "title": "⚡ Производительность кеша",
+      "iterations": 1000,
+      "write_time": "145.03 ms",
+      "read_time": "0.22 ms",
+      "avg_write": "0.145 ms",
+      "avg_read": "0 ms",
+      "status": "✅ OK"
+    },
+    "cache_size": {
+      "title": "📊 Размер кеша",
+      "cache_dir": "/tmp/vdestor_cache/",
+      "total_files": 8,
+      "total_size": "118.52 KB",
+      "oldest_file_age": "11 часов",
+      "status": "✅ OK"
+    },
+    "sessions": {
+      "title": "🔐 Система сессий",
+      "handler": "user",
+      "save_path": "/var/www/www-root/data/mod-tmp",
+      "lifetime": "3600 секунд",
+      "session_id": "407fe585ca0b8fd01745ee3270f2945d",
+      "session_name": "VDE_SESSION",
+      "status": "✅ OK",
+      "session_working": true
+    },
+    "session_security": {
+      "title": "🛡️ Безопасность сессий",
+      "settings": {
+        "session.cookie_secure": "1",
+        "session.cookie_httponly": "1",
+        "session.cookie_samesite": "Lax",
+        "session.use_strict_mode": "0",
+        "session.use_only_cookies": "1"
+      },
+      "issues": [],
+      "status": "✅ OK"
+    },
+    "active_sessions": {
+      "title": "👥 Активные сессии",
+      "active_sessions": 4,
+      "unique_users": 0,
+      "guest_sessions": 4,
+      "expired_sessions": 72,
+      "status": "✅ OK"
+    },
+    "queues": {
+      "title": "📋 Очереди задач",
+      "queue_length": 0,
+      "by_status": [],
+      "by_type": [],
+      "status": "✅ OK"
+    },
+    "queue_workers": {
+      "title": "⚙️ Воркеры очередей",
+      "workers": [],
+      "status": "✅ OK"
+    },
+    "failed_jobs": {
+      "title": "❌ Неудачные задачи",
+      "total_failed": 0,
+      "by_type": [],
+      "recent_failures": [],
+      "status": "✅ OK"
+    },
+    "email_config": {
+      "title": "📧 Настройки Email",
+      "config": {
+        "from_email": "not_set",
+        "from_name": "not_set",
+        "driver": "mail",
+        "host": "not_set",
+        "port": "not_set",
+        "encryption": "none"
+      },
+      "issues": [
+        "Email отправителя не настроен"
+      ],
+      "status": "❌ Error",
+      "error": "Проблемы с настройкой email"
+    },
+    "email_delivery": {
+      "title": "📮 Доставка Email",
+      "last_7_days": {
+        "sent": 0,
+        "opened": 0,
+        "clicked": 0,
+        "open_rate": "0%"
+      },
+      "last_sent": null,
+      "status": "⚠️ Warning",
+      "warning": "Нет отправленных писем за последние 7 дней"
+    },
+    "security_headers": {
+      "title": "🛡️ Заголовки безопасности",
+      "present_headers": [],
+      "issues": [
+        "Отсутствует заголовок: X-Content-Type-Options",
+        "Отсутствует заголовок: X-Frame-Options",
+        "Отсутствует заголовок: X-XSS-Protection",
+        "Отсутствует заголовок: Referrer-Policy",
+        "Отсутствует заголовок: Strict-Transport-Security"
+      ],
+      "status": "⚠️ Warning",
+      "warning": "Некоторые заголовки безопасности отсутствуют или неправильные"
+    },
+    "file_security": {
+      "title": "🔒 Права доступа к файлам",
+      "checked_files": 5,
+      "issues": [
+        "/var/www/www-root/data/site/vdestor.ru/composer.json доступен для чтения всем",
+        "/var/www/www-root/data/site/vdestor.ru/composer.lock доступен для чтения всем"
+      ],
+      "status": "❌ Error",
+      "error": "Критические проблемы с правами доступа"
+    },
+    "config_security": {
+      "title": "⚙️ Безопасность конфигурации",
+      "issues": [
+        "expose_php включен"
+      ],
+      "environment": "production",
+      "status": "❌ Error",
+      "error": "Небезопасные настройки для production"
+    },
+    "login_attempts": {
+      "title": "🚫 Попытки входа",
+      "blocked_accounts": 0,
+      "last_hour": {
+        "total_attempts": 0,
+        "unique_users": 0,
+        "unique_ips": 0
+      },
+      "status": "✅ OK"
+    },
+    "suspicious_activity": {
+      "title": "🔍 Подозрительная активность",
+      "last_24h": [],
+      "total_suspicious": 0,
+      "status": "✅ OK"
+    },
+    "api_performance": {
+      "title": "⚡ Производительность API",
+      "endpoints": {
+        "/api/test": {
+          "method": "GET",
+          "status": 200,
+          "time": "787.99 ms"
+        },
+        "/api/search?q=test": {
+          "method": "GET",
+          "status": 200,
+          "time": "46.26 ms"
+        },
+        "/api/availability?product_ids=1&city_id=1": {
+          "method": "GET",
+          "status": 200,
+          "time": "15.94 ms"
+        }
+      },
+      "status": "✅ OK"
+    },
+    "page_load_time": {
+      "title": "📄 Скорость загрузки страниц",
+      "pages": {
+        "Главная": {
+          "path": "/",
+          "status": 200,
+          "time": "73.01 ms",
+          "size": "55.41 KB"
+        },
+        "Магазин": {
+          "path": "/shop",
+          "status": 200,
+          "time": "10.78 ms",
+          "size": "23.5 KB"
+        },
+        "Корзина": {
+          "path": "/cart",
+          "status": 200,
+          "time": "12.84 ms",
+          "size": "14.33 KB"
+        },
+        "Вход": {
+          "path": "/login",
+          "status": 200,
+          "time": "13.17 ms",
+          "size": "13.92 KB"
+        }
+      },
+      "status": "✅ OK"
+    },
+    "slow_queries": {
+      "title": "🐌 Медленные запросы",
+      "status": "⚠️ Skipped",
+      "info": "Нет доступа к slow_log"
+    },
+    "memory_usage": {
+      "title": "💾 Использование памяти",
+      "current": "2 MB",
+      "peak": "2 MB",
+      "limit": "8 GB",
+      "usage_percent": "0.02%",
+      "peak_percent": "0.02%",
+      "status": "✅ OK"
+    },
+    "error_logs": {
+      "title": "📋 Логи ошибок",
+      "logs": {
+        "PHP": {
+          "file": "/var/log/php/error.log",
+          "status": "Файл не найден"
+        },
+        "Nginx": {
+          "file": "/var/log/nginx/error.log",
+          "size": "317 B",
+          "last_modified": "2025-06-05 10:06:36",
+          "recent_errors": 0
+        },
+        "Application": {
+          "file": "/var/log/vdestor/app.log",
+          "size": "306.89 KB",
+          "last_modified": "2025-06-05 10:21:08",
+          "recent_errors": 8
+        }
+      },
+      "total_recent_errors": 8,
+      "status": "✅ OK"
+    },
+    "application_logs": {
+      "title": "📝 Логи приложения",
+      "last_24h_stats": {
+        "error": {
+          "count": 8,
+          "last": "2025-06-05 08:31:06"
+        },
+        "warning": {
+          "count": 9,
+          "last": "2025-06-04 22:53:26"
+        },
+        "info": {
+          "count": 356,
+          "last": "2025-06-05 10:21:07"
+        },
+        "debug": {
+          "count": 222,
+          "last": "2025-06-05 10:21:08"
+        }
+      },
+      "critical_errors_count": 8,
+      "recent_critical": [
+        {
+          "message": "Ошибка рендеринга шаблона",
+          "context": "{\"view\": \"errors/500\", \"error\": \"View файл не найден: /var/www/www-root/data/site/vdestor.ru/src/views/errors/500.php\"}",
+          "created_at": "2025-06-05 08:31:06"
+        },
+        {
+          "message": "Router error",
+          "context": "{\"file\": \"/var/www/www-root/data/site/vdestor.ru/src/Controllers/ProductController.php\", \"line\": 38, \"message\": \"SQLSTATE[HY093]: Invalid parameter number\"}",
+          "created_at": "2025-06-05 08:31:06"
+        },
+        {
+          "message": "Ошибка рендеринга шаблона",
+          "context": "{\"view\": \"errors/500\", \"error\": \"View файл не найден: /var/www/www-root/data/site/vdestor.ru/src/views/errors/500.php\"}",
+          "created_at": "2025-06-05 08:30:55"
+        },
+        {
+          "message": "Router error",
+          "context": "{\"file\": \"/var/www/www-root/data/site/vdestor.ru/src/Controllers/ProductController.php\", \"line\": 38, \"message\": \"SQLSTATE[HY093]: Invalid parameter number\"}",
+          "created_at": "2025-06-05 08:30:55"
+        },
+        {
+          "message": "Ошибка рендеринга шаблона",
+          "context": "{\"view\": \"errors/500\", \"error\": \"View файл не найден: /var/www/www-root/data/site/vdestor.ru/src/views/errors/500.php\"}",
+          "created_at": "2025-06-05 08:29:01"
+        }
+      ],
+      "status": "✅ OK"
+    },
+    "access_logs": {
+      "title": "🌐 Логи доступа",
+      "log_file": "/var/log/nginx/access.log",
+      "stats": {
+        "total_requests": 4,
+        "status_codes": {
+          "301": 3
+        },
+        "top_ips": {
+          "4.28.171.49": 1,
+          "34.28.171.49": 1,
+          "194.190.152.190": 1
+        },
+        "top_urls": {
+          "/media/system/js/core.js": 1,
+          "/wp-includes/js/jquery/jquery.js": 1,
+          "/": 1
+        },
+        "errors_4xx": 0,
+        "errors_5xx": 0
+      },
+      "status": "✅ OK"
+    },
+    "security_logs": {
+      "title": "🔐 Логи безопасности",
+      "last_24h_events": {
+        "successful_login": 7
+      },
+      "total_events": 7,
+      "status": "✅ OK"
+    },
+    "data_integrity": {
+      "title": "🔍 Целостность данных",
+      "issues": [
+        "Товары без изображений: 99729",
+        "Товары без описания: 283094"
+      ],
+      "total_issues": 2,
+      "status": "⚠️ Warning",
+      "warning": "Есть проблемы с целостностью данных"
+    },
+    "orphaned_records": {
+      "title": "🗑️ Потерянные записи",
+      "orphaned_records": [],
+      "total_orphaned": 0,
+      "status": "✅ OK"
+    },
+    "duplicate_data": {
+      "title": "👥 Дубликаты данных",
+      "duplicates": [],
+      "has_duplicates": false,
+      "status": "✅ OK"
+    },
+    "missing_relations": {
+      "title": "🔗 Отсутствующие связи",
+      "missing_relations": [],
+      "total_missing": 0,
+      "status": "✅ OK"
+    },
+    "metrics": {
+      "title": "📊 Метрики системы",
+      "summary": [],
+      "performance": {
+        "avg_page_load_time": 0,
+        "avg_api_response_time": 0,
+        "avg_db_query_time": 0,
+        "cache_hit_rate": 0
+      },
+      "errors": {
+        "count": 0,
+        "types": []
+      },
+      "status": "✅ OK"
+    },
+    "business_metrics": {
+      "title": "💼 Бизнес-метрики",
+      "last_7_days": {
+        "unique_users": 1,
+        "sessions": 37,
+        "actions": 104,
+        "cart_conversion": "0%"
+      },
+      "product_engagement": {
+        "tracked_products": 0,
+        "avg_cart_adds": 0
+      },
+      "status": "✅ OK"
+    },
+    "system_metrics": {
+      "title": "💻 Системные метрики",
+      "database": {
+        "status": "healthy",
+        "query_count": 12,
+        "avg_query_time": 0.0003618200620015462
+      },
+      "cache": {
+        "status": "healthy",
+        "hit_rate": 0
+      },
+      "memory": {
+        "current": "2 MB",
+        "peak": "2 MB",
+        "limit": "8192M"
+      },
+      "load_average": [
+        0.080078125,
+        0.0166015625,
+        0.00537109375
+      ],
+      "disk_usage": {
+        "free": "95.84 GB",
+        "total": "442.82 GB",
+        "percent_used": "78.36%"
+      },
+      "status": "⚠️ Warning",
+      "warning": "Некоторые системные компоненты требуют внимания"
+    },
+    "external_apis": {
+      "title": "🌐 Внешние API",
+      "apis": {
+        "Яндекс.Карты": {
+          "url": "https://api-maps.yandex.ru/2.1/?lang=ru_RU",
+          "status_code": 200,
+          "response_time": "56.36 ms",
+          "available": true
+        },
+        "DaData": {
+          "url": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address",
+          "status_code": 401,
+          "response_time": "17.69 ms",
+          "available": true
+        },
+        "1C Integration": {
+          "url": "https://api.vdestor.ru/1c/health",
+          "status_code": 404,
+          "response_time": "67.61 ms",
+          "available": true
+        }
+      },
+      "total_failures": 0,
+      "status": "✅ OK"
+    },
+    "cdn_services": {
+      "title": "☁️ CDN сервисы",
+      "resources": {
+        "jQuery": {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+          "status": "✅",
+          "response_time": "165.03 ms"
+        },
+        "Font Awesome": {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+          "status": "✅",
+          "response_time": "165.37 ms"
+        },
+        "Google Fonts": {
+          "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+          "status": "✅",
+          "response_time": "60.5 ms"
+        }
+      },
+      "slow_resources": [],
+      "status": "✅ OK"
+    },
+    "configuration": {
+      "title": "⚙️ Конфигурационные файлы",
+      "files": {
+        ".env": {
+          "path": "/etc/vdestor/config/.env",
+          "exists": "✅",
+          "readable": "✅",
+          "last_modified": "2025-06-04 17:12:21"
+        },
+        "app.ini": {
+          "path": "/etc/vdestor/config/app.ini",
+          "exists": "✅",
+          "readable": "✅",
+          "last_modified": "2025-06-03 16:22:10"
+        },
+        "database.ini": {
+          "path": "/etc/vdestor/config/database.ini",
+          "exists": "✅",
+          "readable": "✅",
+          "last_modified": "2025-06-01 20:26:08"
+        },
+        "nginx.conf": {
+          "path": "/etc/nginx/sites-enabled/vdestor.ru",
+          "exists": "❌"
+        }
+      },
+      "missing_files": [
+        "nginx.conf"
+      ],
+      "status": "❌ Error",
+      "error": "Отсутствуют конфигурационные файлы"
+    },
+    "environment_variables": {
+      "title": "🔧 Переменные окружения",
+      "required_missing": [
+        "APP_NAME",
+        "MAIL_FROM_ADDRESS",
+        "MAIL_FROM_NAME"
+      ],
+      "required_present": 6,
+      "optional_present": 1,
+      "app_env": "production",
+      "status": "❌ Error",
+      "error": "Отсутствуют обязательные переменные окружения"
+    },
+    "cron_jobs": {
+      "title": "⏰ Cron задачи",
+      "expected_jobs": {
+        "queue:work": "* * * * *",
+        "cleanup:logs": "0 2 * * *",
+        "cleanup:sessions": "0 3 * * *",
+        "metrics:calculate": "*/5 * * * *",
+        "opensearch:sync": "0 4 * * *"
+      },
+      "info": "Проверьте crontab -l для подтверждения",
+      "last_runs": [],
+      "status": "✅ OK"
+    },
+    "assets": {
+      "title": "🎨 Фронтенд ассеты",
+      "results": {
+        "assets_dir_exists": true,
+        "dist_dir_exists": true,
+        "compiled_files": {
+          "js": 1,
+          "css": 1
+        },
+        "latest_js": {
+          "file": "main-DKYGEwAr.js",
+          "size": "32.43 KB",
+          "modified": "2025-06-04 12:02:46"
+        },
+        "latest_css": {
+          "file": "main-DgbIZKmS.css",
+          "size": "45.13 KB",
+          "modified": "2025-06-04 12:02:46"
+        }
+      },
+      "status": "✅ OK"
+    },
+    "javascript": {
+      "title": "📜 JavaScript файлы",
+      "files": {
+        "main.js": {
+          "exists": "✅",
+          "size": "12.08 KB",
+          "lines": 354
+        },
+        "cart.js": {
+          "exists": "❌"
+        },
+        "search.js": {
+          "exists": "❌"
+        }
+      },
+      "missing_files": [
+        "cart.js",
+        "search.js"
+      ],
+      "status": "⚠️ Warning",
+      "warning": "Некоторые JS файлы отсутствуют"
+    },
+    "css": {
+      "title": "🎨 CSS файлы",
+      "files": {
+        "styles.css": {
+          "exists": "❌"
+        },
+        "dashboard.css": {
+          "exists": "❌"
+        },
+        "shop.css": {
+          "exists": "❌"
+        }
+      },
+      "missing_files": [
+        "styles.css",
+        "dashboard.css",
+        "shop.css"
+      ],
+      "status": "⚠️ Warning",
+      "warning": "Некоторые CSS файлы отсутствуют"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "critical",
+      "message": "Немедленно устраните критические ошибки: Отсутствуют PHP расширения, Небезопасные права доступа"
+    },
+    {
+      "priority": "high",
+      "message": "Освободите место на диске или увеличьте размер диска"
+    },
+    {
+      "priority": "medium",
+      "message": "Проверьте и исправьте целостность данных в БД"
+    },
+    {
+      "priority": "low",
+      "message": "Очистите старые записи кеша"
+    }
+  ],
+  "system_info": {
+    "hostname": "7375893.ru",
+    "ip": "79.133.183.86",
+    "php_version": "8.1.2-1ubuntu2.21",
+    "server_software": "nginx/1.18.0"
+  }
+}
